@@ -1,0 +1,30 @@
+#!/bin/env bash
+
+# user -> Brown Carter
+# file -> systemctl
+# date -> Tue-Jun-2022  21:10:41
+
+case $1 in
+  enable)
+    sv-enable "$2"
+    ;;
+  disable)
+    sv-disable "$2"
+    ;;
+  start)
+    sv up "$2"
+    ;;
+  stop)
+    sv down "$2"
+    ;;
+  status)
+    SVPID=$(pgrep "$2" | head -n 1)
+    if [[ -n $SVPID ]]; then
+      echo "$2 is running"
+    else echo "$2 is not running"
+    fi
+    ;;
+  *)
+    echo "invalid option"
+    ;;
+esac
