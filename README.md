@@ -5,7 +5,7 @@ Systemctl for termux.
 only use if you've installed termux-service.
 
 ```
-$ pkg install termux-service
+$ pkg install termux-services
 ```
 
 # Usage
