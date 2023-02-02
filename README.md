@@ -2,10 +2,10 @@
 Systemctl for termux.
 
 ## Warning
-only use if you've installed termux-service.
+only use if you've installed termux-services.
 
 ```
-$ pkg install termux-service
+$ pkg install termux-services
 ```
 
 # Usage
